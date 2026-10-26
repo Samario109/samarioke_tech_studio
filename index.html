@@ -7,6 +7,7 @@
     <title>Samarioke Tech Studio | Digital products, built to scale</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero-video.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -28,7 +29,12 @@
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section video-hero" id="video-hero">
+            <div class="hero-video-media" aria-hidden="true">
+                <video id="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
+                    <source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="hero-content">
                 <span class="badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Custom software &amp; AI solutions</span>
                 <h1>Digital products built for what’s next.</h1>
@@ -39,19 +45,10 @@
                 </div>
                 <p class="hero-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nairobi, Kenya · Working worldwide</p>
             </div>
-            <div class="hero-visual" aria-label="A team collaborating on a digital product">
-                <div class="image-card main-image-card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Creative team collaborating around a laptop">
-                </div>
-                <div class="floating-badge floating-badge-top">
-                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                    <div><strong>Built to grow</strong><span>Strategy to launch</span></div>
-                </div>
-                <div class="floating-badge floating-badge-bottom">
-                    <i class="fa-solid fa-code" aria-hidden="true"></i>
-                    <div><strong>Made for you</strong><span>Custom, not cookie-cutter</span></div>
-                </div>
-            </div>
+            <button class="hero-video-toggle" id="heroVideoToggle" type="button" aria-controls="hero-background-video" aria-label="Pause background video">
+                <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                <span>Pause video</span>
+            </button>
         </section>
 
         <section class="stats-section" aria-label="Studio highlights">
@@ -104,5 +101,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="hero-video.js"></script>
 </body>
 </html>
