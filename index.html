@@ -31,7 +31,7 @@
     <main>
         <section class="hero-section video-hero" id="video-hero">
             <div class="hero-video-media" aria-hidden="true">
-                <video id="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
+                <video id="hero-background-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1600&amp;q=85">
                     <source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4" type="video/mp4">
                 </video>
             </div>
@@ -45,10 +45,6 @@
                 </div>
                 <p class="hero-note"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nairobi, Kenya · Working worldwide</p>
             </div>
-            <button class="hero-video-toggle" id="heroVideoToggle" type="button" aria-controls="hero-background-video" aria-label="Pause background video">
-                <i class="fa-solid fa-pause" aria-hidden="true"></i>
-                <span>Pause video</span>
-            </button>
         </section>
 
         <section class="stats-section" aria-label="Studio highlights">
@@ -101,6 +97,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="hero-video.js"></script>
 </body>
 </html>
