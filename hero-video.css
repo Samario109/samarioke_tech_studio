@@ -140,13 +140,3 @@
         bottom: 0.85rem;
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .hero-video-media video {
-        display: none;
-    }
-
-    .video-hero .hero-video-toggle {
-        display: none;
-    }
-}
