@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore website concepts and digital product demos by Samarioke Tech Studio.">
-    <title>Portfolio | Samarioke Tech Studio</title>
+    <meta name="description" content="Explore six interactive website concepts for real estate, SaaS, creative studios, restaurants, retail, and wellness by Samarioke Tech Studio.">
+    <title>Website Portfolio &amp; Live Demos | Samarioke Tech Studio</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -19,13 +20,22 @@
     </header>
     <main>
         <section class="page-hero">
-            <span class="badge"><i class="fa-solid fa-window-restore" aria-hidden="true"></i> Selected concepts</span>
-            <h1>Demo websites, designed to make an impression.</h1>
-            <p>Explore these interactive sample websites to see how a finished project could look and feel. They are concept demos, not live client projects.</p>
+            <span class="badge"><i class="fa-solid fa-window-restore" aria-hidden="true"></i> Six interactive concepts</span>
+            <h1>See what your next website could become.</h1>
+            <p>Explore complete, clickable website concepts for different industries. Each one is a starting point—we can tailor the design and features to your business.</p>
         </section>
-        <section class="demo-section portfolio-page-section">
-            <div class="demo-grid">
-                <article class="demo-card portfolio-card">
+        <section class="demo-section portfolio-page-section" aria-label="Website demo collection">
+            <div class="portfolio-toolbar">
+                <div class="portfolio-filters" role="group" aria-label="Filter website demos">
+                    <button class="portfolio-filter is-active" type="button" data-filter="all" aria-pressed="true">All concepts</button>
+                    <button class="portfolio-filter" type="button" data-filter="business" aria-pressed="false">Business</button>
+                    <button class="portfolio-filter" type="button" data-filter="commerce" aria-pressed="false">Commerce</button>
+                    <button class="portfolio-filter" type="button" data-filter="creative" aria-pressed="false">Creative</button>
+                </div>
+                <p class="portfolio-count" id="portfolioCount" aria-live="polite">Showing 6 concepts</p>
+            </div>
+            <div class="demo-grid portfolio-grid" id="portfolioGrid">
+                <article class="demo-card portfolio-card" data-category="business">
                     <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Contemporary luxury home with expansive windows" loading="lazy">
                         <span class="portfolio-type">Real estate concept</span>
@@ -33,11 +43,13 @@
                     <div class="demo-info">
                         <h2>Haven Estates</h2>
                         <p>A refined property experience with featured listings, viewing requests, and neighborhood discovery.</p>
-                        <a href="demos/haven-estates/index.html" class="card-link" target="_blank" rel="noopener noreferrer">View website demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                        <a href="contact.html?project=Haven%20Estates" class="card-link">Discuss a similar site <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="portfolio-actions">
+                            <a href="demos/haven-estates/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Haven%20Estates" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </article>
-                <article class="demo-card portfolio-card">
+                <article class="demo-card portfolio-card" data-category="business">
                     <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Team collaborating on a software product" loading="lazy">
                         <span class="portfolio-type">SaaS concept</span>
@@ -45,11 +57,13 @@
                     <div class="demo-info">
                         <h2>Orbit Workspace</h2>
                         <p>A clear, conversion-focused product site to explain features, plans, and the value of a software platform.</p>
-                        <a href="demos/orbit-workspace/index.html" class="card-link" target="_blank" rel="noopener noreferrer">View website demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                        <a href="contact.html?project=Orbit%20Workspace" class="card-link">Discuss a similar site <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="portfolio-actions">
+                            <a href="demos/orbit-workspace/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Orbit%20Workspace" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </article>
-                <article class="demo-card portfolio-card">
+                <article class="demo-card portfolio-card" data-category="creative">
                     <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bright creative studio workspace" loading="lazy">
                         <span class="portfolio-type">Creative studio concept</span>
@@ -57,18 +71,63 @@
                     <div class="demo-info">
                         <h2>Northline Studio</h2>
                         <p>A distinctive portfolio platform that puts a creative team's work, story, and contact path front and center.</p>
-                        <a href="demos/northline-studio/index.html" class="card-link" target="_blank" rel="noopener noreferrer">View website demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                        <a href="contact.html?project=Northline%20Studio" class="card-link">Discuss a similar site <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="portfolio-actions">
+                            <a href="demos/northline-studio/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Northline%20Studio" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="demo-card portfolio-card" data-category="commerce">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Elegant restaurant table set for dinner" loading="lazy">
+                        <span class="portfolio-type">Restaurant concept</span>
+                    </div>
+                    <div class="demo-info">
+                        <h2>Saffron Table</h2>
+                        <p>A warm dining destination with an inviting menu, chef story, and simple table reservations.</p>
+                        <div class="portfolio-actions">
+                            <a href="demos/saffron-table/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Saffron%20Table" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="demo-card portfolio-card" data-category="commerce">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Carefully styled apparel and lifestyle products" loading="lazy">
+                        <span class="portfolio-type">Online store concept</span>
+                    </div>
+                    <div class="demo-info">
+                        <h2>Morrow Goods</h2>
+                        <p>A considered storefront for everyday essentials, with curated collections and clear product storytelling.</p>
+                        <div class="portfolio-actions">
+                            <a href="demos/morrow-goods/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Morrow%20Goods" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="demo-card portfolio-card" data-category="creative">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Calm wellness studio with soft natural light" loading="lazy">
+                        <span class="portfolio-type">Wellness concept</span>
+                    </div>
+                    <div class="demo-info">
+                        <h2>Solace Wellness</h2>
+                        <p>A calming studio experience to introduce classes, help clients find their practice, and book a visit.</p>
+                        <div class="portfolio-actions">
+                            <a href="demos/solace-wellness/index.html" class="portfolio-view" target="_blank" rel="noopener noreferrer">Explore demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="contact.html?project=Solace%20Wellness" class="portfolio-inquire">Build something similar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
         <section class="home-cta">
-            <div><span class="eyebrow">Your idea, your brand</span><h2>Let’s design your next standout website.</h2></div>
-            <a href="contact.html" class="btn primary">Start a project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <div><span class="eyebrow">Your business deserves its own look</span><h2>Like a direction? Let’s make it yours.</h2><p>We’ll shape the visuals, content, and features around your goals—not copy a template.</p></div>
+            <a href="contact.html" class="btn primary">Tell us about your idea <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </section>
     </main>
     <footer class="site-footer"><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-terminal"></i></span><span class="logo-name">samarioke<span>.</span></span></a><p>&copy; 2026 Samarioke Tech Studio. Nairobi, Kenya.</p><a href="mailto:samarioke7@gmail.com">samarioke7@gmail.com</a></footer>
     <script src="script.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>

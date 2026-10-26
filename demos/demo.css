@@ -48,6 +48,36 @@ body.northline {
     --surface: #fbf8f2;
 }
 
+body.saffron {
+    --ink: #2e1e18;
+    --muted: #77635a;
+    --paper: #fbf5ec;
+    --accent: #a34a2f;
+    --accent-contrast: #fffaf3;
+    --line: rgba(46, 30, 24, 0.16);
+    --surface: #fffdf8;
+}
+
+body.morrow {
+    --ink: #1d2723;
+    --muted: #68756f;
+    --paper: #f2f4ef;
+    --accent: #425f4d;
+    --accent-contrast: #f8faf5;
+    --line: rgba(29, 39, 35, 0.14);
+    --surface: #fbfcf8;
+}
+
+body.solace {
+    --ink: #27312d;
+    --muted: #6b7871;
+    --paper: #f2f5f0;
+    --accent: #648778;
+    --accent-contrast: #fff;
+    --line: rgba(39, 49, 45, 0.14);
+    --surface: #fbfcf9;
+}
+
 a {
     color: inherit;
 }
